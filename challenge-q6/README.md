@@ -227,10 +227,12 @@ Model, veritabanı ile doğrudan etkileşimde bulunur. Bu katman, genellikle JPA
 ## Proje Kurulumu ##
 
 1. Projeyi klonlayın.
+```
+gh repo clone seyitalikoc/Backend-Challenge
+```
 2. Maven kullanarak bağımlılıkları yükleyin.
 3. Veritabanı bağlantı bilgilerini [application.properties](https://github.com/seyitalikoc/Backend-Challenge/blob/main/challenge-q6/src/main/resources/application.properties) dosyasına ekleyin.
 4. Uygulamayı çalıştırın ve belirtilen endpoint'leri test edin.
-
 
 
 
