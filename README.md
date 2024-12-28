@@ -114,7 +114,7 @@ get uzak_dosya_yolu
 <br></br>
 ### SORU-6 ###
 
-
+[Cevaba gitmek için tıklayınız.](https://github.com/seyitalikoc/Backend-Challenge/blob/main/challenge-q6)
 
 
 
