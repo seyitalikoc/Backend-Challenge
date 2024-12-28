@@ -60,7 +60,7 @@ for (int i = 0; i <= 5; i++) {
   System.out.println();
 }
 ```
-[İlgili Dosya](https://github.com/seyitalikoc/Backend-Challenge/blob/main/q4/Main.java)
+[İlgili Dosya](https://github.com/seyitalikoc/Backend-Challenge/blob/main/q4)
 
 <br></br>
 ### SORU-5 ###
