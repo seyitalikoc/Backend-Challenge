@@ -11,12 +11,4 @@ public class Main {
             System.out.println();
         }
     }
-} /*if (i == 0) {
-                System.out.println("*");
-            }
-            else{
-                for (int j = 0; j < 2*i; j++) {
-                    System.out.print("*");
-                }
-                System.out.println();
-            }*/
+}
