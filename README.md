@@ -4,7 +4,7 @@
 #### MVC (Model-View-Controller) Kavramı ####
 
 MVC, yazılım geliştirme süreçlerinde uygulama mantığını ayrıştırmak için kullanılan bir mimari desendir. Bu desen, uygulamayı üç temel katmana ayırır:
-- **Model :** Uygulamanın veri tabanı, iş mantığı ve veri yönetimiyle ilgili işlemler burada gerçekleştirilir. 
+- **Model :** Veritabanı ile etkileşime giren, iş mantığını içeren ve verilerin temsilini yapan sınıflardır. Genellikle Entity sınıfları olarak tanımlanır.
 - **View :** Modelden gelen verileri kullanıcıya sunar ve kullanıcıdan alınan verileri kontrol katmanına iletir. 
 - **Controller :** Model ve View arasında bir köprü görevi görür. Kullanıcıdan gelen girdileri alır, iş mantığını model ile işleyerek sonucu View'e gönderir.
 
