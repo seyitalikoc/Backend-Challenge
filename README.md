@@ -39,13 +39,58 @@ RESTful Web Servisleri bunlara örnek gösterilebilir.
 
 <br></br>
 ### SORU-3 ###
+Eğer web sayfasındaki güncellenecek alan **sadece** sunucudan istemciye veri iletimi varsa bunun için SSE(server-sents events) kullanırım.<br>
+SSE'nin avantajları:
+- Basit ve hafif bir yapı.
+- Tarayıcılar tarafından yerel olarak desteklenir.
+- HTTP üzerinden çalışır, özel bir protokol gerekmez.
 
 
+<br>Aşağıda SSE kullanılarak yapılan bir örnek vardır. Burada her saniye veri istemciye iletilmektedir.<br>
 
+- CONTROLLER
+```
+@Controller
+public class SseController {
+    // Thymeleaf ana sayfası
+    @GetMapping("/")
+    public String index(Model model) {
+        return "index";
+    }
+    // SSE Endpoint
+    @RequestMapping(value = "/stream-data", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> streamData() {
+        return Flux.interval(Duration.ofSeconds(1)) // Her saniye veri gönder
+                   .map(seq -> "Güncelleme Zamanı: " + LocalDateTime.now());
+    }
+}
+```
+- THYMELEAF
+```
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SSE Örneği</title>
+    <script>
+        // SSE bağlantısını başlat
+        const eventSource = new EventSource('/stream-data');
 
-
-
-
+        // Gelen verileri DOM'a yaz
+        eventSource.onmessage = function(event) {
+            const dataContainer = document.getElementById("data");
+            dataContainer.innerHTML = event.data; // Gelen veriyi güncelle
+        };
+    </script>
+</head>
+<body>
+    <h1>SSE ile Anlık Veri Güncelleme</h1>
+    <div id="data" style="font-size: 24px; font-weight: bold; color: green;">
+        Bekleniyor...
+    </div>
+</body>
+</html>
+```
 
 
 <br></br>
