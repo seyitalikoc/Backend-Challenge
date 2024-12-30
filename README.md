@@ -18,9 +18,9 @@ MVC, yazılım geliştirme süreçlerinde uygulama mantığını ayrıştırmak 
 
   
 #### Java'da Nasıl Kurgulanır ? ####
-- Model katmanında ***@Entity*** ile kurgulanır. 
+- Model katmanında ***Entity*** ile kurgulanır. 
 - View katmanında ***JSP, Thymeleaf*** veya herhangi bir şablon motoru kullanılarak kurgulanır.
-- Controller katmanında ***@Controller*** kullanılarak kurgulanır.
+- Controller katmanında ***Controller*** kullanılarak kurgulanır.
 
 
 #### Object Oriented Katmanları ####
